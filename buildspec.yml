@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+    commands:
+      - echo Installing Gatsby and Gatsby-CLI...
+      - npm install -g gatsby
+      - npm install -g gatsby-cli
+  pre_build:
+    commands:
+      - echo Installing Node packages...
+      - npm install
+  build:
+    commands:
+      - echo Build initiated...
+      - npm run build
+artifacts:
+  files:
+    - "**/*"
+  base-directory: public
