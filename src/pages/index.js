@@ -14,6 +14,17 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
+      <section>
+        <p>
+          <h2>Music Technology</h2>
+          <div style={{ fontStyle: "italic" }}>Symposium & Recital </div>
+          April 21 <br />
+          Fenway Center <br />
+          <small>Presentations 6pm </small>
+          <br />
+          <small>Performances 8pm</small>
+        </p>
+      </section>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
