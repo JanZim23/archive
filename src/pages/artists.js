@@ -14,7 +14,7 @@ const AboutPage = ({ data, location }) => {
       <SEO title={pageTitle} />
       <h1>{pageTitle}</h1>
       {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
+        const title = node.frontmatter.name || node.fields.slug
         return (
           <article key={node.fields.slug}>
             <header>
@@ -27,7 +27,7 @@ const AboutPage = ({ data, location }) => {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              {/*<small>{node.frontmatter.date}</small>*/}
             </header>
             <section>
               <p
@@ -47,7 +47,7 @@ export default AboutPage
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___name], order: ASC }) {
       edges {
         node {
           excerpt
@@ -55,8 +55,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
+            name
             description
           }
         }

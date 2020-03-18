@@ -1,90 +1,106 @@
-import React from "react"
+import React, { Component } from "react"
 import { rhythm, scale } from "../utils/typography"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import hamburger from '../styles/hamburgers.min.css'
+import styles from './header.module.css'
+import { useStaticQuery, graphql, Link, StaticQuery } from "gatsby"
 
-const NavLink = ({ to, children }) => {
-  return (
-    <li style={{ display: 'inline-block', marginRight: '1rem' }}>
-      <Link to={to}>{children}</Link>
-    </li>
-  )
+class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {isExpanded: false};
+    this.handleExpand = this.handleExpand.bind(this);
+  }
+
+  handleExpand() {
+    this.setState(prevState => ({
+      isExpanded: !prevState.isExpanded
+    }));
+  }
+
+  render() {
+    const rootPath = `${__PATH_PREFIX__}/`
+    const siteTitle = this.props.data.site.siteMetadata.title
+    const artists = this.props.data.allMarkdownRemark.edges
+
+    const navLinks = (
+      <nav>
+        {artists.map(({ node }) => (
+          <Link to={node.fields.slug} className={styles.navlink}>{node.frontmatter.name}</Link>
+        ))}
+      </nav>
+    )
+
+    const homeLink = (
+      <Link
+        className={styles.sitetitle}
+        to={`/`}
+      >
+        {siteTitle}
+      </Link>
+    )
+
+    // if (location.pathname === rootPath) {
+    //   return (
+    //     <header>
+    //       <h1
+    //         style={{
+    //           ...scale(1.5),
+    //           marginBottom: rhythm(1.5),
+    //           marginTop: 0,
+    //         }}
+    //       >
+    //         {homeLink}
+    //       </h1>
+    //       {navLinks}
+    //     </header>
+    //   )
+    // } else {
+      return (
+        <header className={styles.header}>
+          <button className={`hamburger hamburger--minus${this.state.isExpanded ? ' is-active' : ''}`} type={"button"} onClick={this.handleExpand}>
+            <span className={"hamburger-box"}>
+              <span className={"hamburger-inner"}/>
+            </span>
+          </button>
+          <h1 className={styles.sitetitle}
+
+            //               style={{
+            //   // fontFamily: `Montserrat, sans-serif`,
+            //   marginTop: 0,
+            // }}
+          >
+            <Link to={`/`}>{siteTitle}</Link>
+          </h1>
+          {navLinks}
+        </header>
+      )
+  }
+  // }
 }
 
-const Header = ({ location }) => {
-  const data = useStaticQuery(graphql`
-      query TitleQuery {
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query HeaderQuery {
         site {
           siteMetadata {
             title
           }
         }
+        allMarkdownRemark(sort: {fields: [frontmatter___name], order: ASC}) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                name
+              }
+            }
+          }
+        }
       }
-    `)
-
-  const rootPath = `${__PATH_PREFIX__}/`
-  const siteTitle = data.site.siteMetadata.title
-
-  const navLinks = (
-    <nav>
-      <NavLink to={'/about'}>About</NavLink>
-      <NavLink to={'/artists'}>Artists</NavLink>
-      <NavLink to={'/event'}>Event</NavLink>
-    </nav>
-  )
-
-  const homeLink = (
-    <Link
-      style={{
-        boxShadow: `none`,
-        textDecoration: `none`,
-      }}
-      to={`/`}
-    >
-      {siteTitle}
-    </Link>
-  )
-
-  if (location.pathname === rootPath) {
-    return (
-      <header>
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          {homeLink}
-        </h1>
-        {navLinks}
-      </header>
-    )
-  } else {
-    return (
-      <header>
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          {homeLink}
-        </h3>
-        {navLinks}
-      </header>
-    )
-  }
-}
-
-
-export default Header
-
-// export const pageQuery = graphql`
-//   query {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//   }
-// `
+    `}
+    render={data => <Header data={data} {...props}/>}
+  />
+)
