@@ -1,8 +1,8 @@
 /*For anything custom that isn't appropriate for the overrideThemeStyles call*/
 
 body {
-  background-color: #2B303A;
-  color: #EEE5E9;
+  background-color: #010101;
+  color: #F0ECE2;
 }
 
 .hamburger.is-active .hamburger-inner,
@@ -11,5 +11,5 @@ body {
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
-  background-color: #EEE5E9;
+  background-color: #F0ECE2;
 }
