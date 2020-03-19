@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 import { rhythm, scale } from "../utils/typography"
-import hamburger from '../styles/hamburgers.min.css'
 import styles from './header.module.css'
-import { useStaticQuery, graphql, Link, StaticQuery } from "gatsby"
+import { graphql, Link, StaticQuery } from "gatsby"
+import { CSSTransition } from "react-transition-group"
 
 class Header extends Component {
   constructor(props) {
@@ -57,7 +57,7 @@ class Header extends Component {
     // } else {
       return (
         <header className={styles.header}>
-          <button className={`hamburger hamburger--minus${this.state.isExpanded ? ' is-active' : ''}`} type={"button"} onClick={this.handleExpand}>
+          <button className={`${styles.hamburgerMenu} hamburger hamburger--minus${this.state.isExpanded ? ' is-active' : ''}`} type={"button"} onClick={this.handleExpand}>
             <span className={"hamburger-box"}>
               <span className={"hamburger-inner"}/>
             </span>
@@ -71,7 +71,19 @@ class Header extends Component {
           >
             <Link to={`/`}>{siteTitle}</Link>
           </h1>
-          {navLinks}
+          <CSSTransition
+            in={this.state.isExpanded}
+            timeout={250}
+            classNames={{
+              enter: styles.artistNavEnter,
+              enterActive: styles.artistNavEnterActive,
+              exit: styles.artistNavExit,
+              exitActive: styles.artistNavExitActive
+            }}
+            unmountOnExit
+          >
+            {navLinks}
+          </CSSTransition>
         </header>
       )
   }

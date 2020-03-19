@@ -29,6 +29,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-transition-group": "^4.3.0",
     "react-typography": "^0.16.19",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75",
@@ -40,7 +41,9 @@
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
-    "music", "music tech", "Northeastern"
+    "music",
+    "music tech",
+    "Northeastern"
   ],
   "license": "MIT",
   "main": "n/a",

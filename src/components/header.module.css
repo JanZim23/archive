@@ -27,8 +27,22 @@ a {
 }
 a:hover { color:grey; }
 
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
-  background-color: #EEE5E9;
+h1,
+.hamburger-menu {
+  display: inline-block;
+}
+
+.artist-nav-enter {
+  opacity: 0;
+}
+.artist-nav-enter-active {
+  opacity: 1;
+  transition: opacity 250ms;
+}
+.artist-nav-exit {
+  opacity: 1;
+}
+.artist-nav-exit-active {
+  opacity: 0;
+  transition: opacity 250ms;
 }
