@@ -3,10 +3,6 @@ import Wordpress2016 from "typography-theme-wordpress-2016"
 
 Wordpress2016.overrideThemeStyles = () => {
   return {
-    "body": {
-      backgroundColor: '#2B303A',
-      color: '#EEE5E9'
-    },
     "a": {
       color: 'inherit'
     },

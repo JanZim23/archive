@@ -1,6 +1,7 @@
 ---
-title: Chris Ritter
-date: "2020-02-06T14:13:03.284Z"
+name: "Chris Ritter"
 description: "Bio"
+video: "https://www.youtube.com/watch?v=5WvWkUhszeE"
 ---
 
+Hi I'm crhis

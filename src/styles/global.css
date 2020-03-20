@@ -1,1 +1,15 @@
 /*For anything custom that isn't appropriate for the overrideThemeStyles call*/
+
+body {
+  background-color: #010101;
+  color: #F0ECE2;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after,
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: #F0ECE2;
+}

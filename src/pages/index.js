@@ -10,16 +10,10 @@ const HomePage = ({ data, location }) => {
   return (
     <Layout location={location}>
       <SEO title="All posts" />
-      <Bio />
+      {/*<Bio />*/}
       <section>
         <h2>Music Technology</h2>
-        <div style={{ fontStyle: "italic" }}>Symposium & Recital </div>
-        <p>
-          April 21 - Fenway Center <br />
-          <small>Presentations 6pm </small>
-          <br />
-          <small>Performances 8pm</small>
-        </p>
+        <div style={{ fontStyle: "italic" }}>Coming soon.</div>
       </section>
     </Layout>
   )

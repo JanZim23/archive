@@ -1,6 +1,5 @@
 ---
-title: Mari Geti
-date: "2020-02-13T14:12:03.284Z"
+name: "Mari Geti"
 description: "Austin Henry"
 ---
 

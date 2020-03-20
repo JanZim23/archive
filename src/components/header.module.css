@@ -1,0 +1,49 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+  z-index: 1;
+}
+
+.sitetitle {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.navlink {
+  display: block;
+  padding: 6px;
+}
+
+a {
+  text-decoration: none;
+  box-shadow: none;
+  /*color:blue;*/
+  /*-o-transition:.5s;*/
+  /*-moz-transition:.5s;*/
+  /*-webkit-transition:.5s;*/
+  transition:.5s;
+}
+a:hover { color:grey; }
+
+h1,
+.hamburger-menu {
+  display: inline-block;
+}
+
+.artist-nav-enter {
+  opacity: 0;
+}
+.artist-nav-enter-active {
+  opacity: 1;
+  transition: opacity 250ms;
+}
+.artist-nav-exit {
+  opacity: 1;
+}
+.artist-nav-exit-active {
+  opacity: 0;
+  transition: opacity 250ms;
+}
