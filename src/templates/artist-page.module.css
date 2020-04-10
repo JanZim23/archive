@@ -4,7 +4,7 @@
   /*width: 1vw;*/
 }
 
-.react-player {
+.hero-video {
   /*object-fit: cover;*/
   position: absolute;
   object-fit: cover;
@@ -19,5 +19,5 @@ h1 {
 }
 
 .pause-fade {
-
+  opacity: 50%;
 }

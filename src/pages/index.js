@@ -13,12 +13,7 @@ const HomePage = ({ data, location }) => {
       <SEO title="All posts" />
       <FullscreenContainer>
         {/*<h2>Music Technology</h2>*/}
-        <div style={{ // Move these to a CSS Module that we can also use in the artist pages
-          margin: 'auto',
-          paddingTop: '40vh',
-          width: '50%',
-          textAlign: "center"
-        }}>
+        <div>
           <h1>Archive</h1>
           <div style={{ fontStyle: "italic" }}>Music in a time of isolation.</div>
         </div>

@@ -1,5 +1,8 @@
 import React, { Component } from "react"
 import { Link, graphql } from "gatsby"
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -28,10 +31,18 @@ class ArtistPageTemplate extends Component {
 
 
   render() {
-
     const artistPage = this.props.data.artistsYaml
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    const sliderSettings = {
+      className: 'center',
+      centerMode: true,
+      slidesToShow: 1,
+      dots: true,
+      infinite: false,
+      centerPadding: '60px',
+      dotsClass: `slick-dots white-dots`
+    }
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -43,7 +54,7 @@ class ArtistPageTemplate extends Component {
           <FullscreenContainer>
             <div className={styles.playerWrapper}>
               <ReactPlayer
-                className={styles.reactPlayer}
+                className={`${styles.heroVideo} ${!this.state.vidIsPlaying && styles.pauseFade} `}
                 url={artistPage.bio_video}
                 width={"100%"}
                 height={"100%"}
@@ -51,43 +62,76 @@ class ArtistPageTemplate extends Component {
                 onPause={this.handlePause}
                 light
                 playsinline
-                controls={false}
+                controls
+                playing
               />
             </div>
-            <h1
+            {!this.state.vidIsPlaying &&
+              <h1 style={{ marginBottom: rhythm(7) }}>
+                {artistPage.name}
+              </h1>
+            }
+          </FullscreenContainer>
+          <div className={'content'}>
+
+            <p style={{whiteSpace: 'pre-wrap'}}>{artistPage.bio}</p>
+            <h2>{artistPage.paper_title}</h2>
+            <ReactPlayer
+              url={artistPage.paper_video}
+              width={"100%"}
+              controls
+            />
+            <a href={`/files${artistPage.fields.slug}${artistPage.paper}`}>Read the Paper (make me a button)</a>
+            {artistPage.fixed_media_pieces.length > 0 &&
+              <div>
+                <h2>Acoustic Works</h2>
+                <Slider {...sliderSettings}>
+                  {artistPage.acoustic_pieces.map((piece, index) => (
+                    <div key={index}>
+                      <h3>{piece.title}</h3>
+                      <p>{piece.date}, {piece.medium}</p>
+                      <p>{piece.program_notes}</p>
+                      <ReactPlayer
+                        url={piece.link}
+                        width={"100%"}
+                        playsinline
+                        controls
+                      />
+                      <a href={`/files${artistPage.fields.slug}${piece.score}`}>Score (make me a button too)</a>
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+            }
+            {artistPage.fixed_media_pieces.length > 0 &&
+              <div>
+                <h2>Fixed Media Works</h2>
+                <Slider {...sliderSettings}>
+                {artistPage.fixed_media_pieces.map((piece, index) => (
+                  <div key={index}>
+                    <h3>{piece.title}</h3>
+                    <p>{piece.date}</p>
+                    <p>{piece.program_notes}</p>
+                    <ReactPlayer
+                      url={piece.link}
+                      width={"100%"}
+                      playsinline
+                      controls
+                    />
+                  </div>
+                ))}
+                </Slider>
+              </div>
+            }
+            <hr
               style={{
-                marginTop: rhythm(1),
-                marginBottom: 0,
-              }}
-            >
-              {artistPage.name}
-            </h1>
-            <p
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
                 marginBottom: rhythm(1),
               }}
-            >
-              {/*{post.frontmatter.date}*/}
-            </p>
-          </FullscreenContainer>
-          <p>{artistPage.bio}</p>
-          <h2>{artistPage.paper_title}</h2>
-          <ReactPlayer
-            // className={styles.reactPlayer}
-            url={artistPage.paper_video}
-            controls
-          />
-          <a href={`/files/${artistPage.paper}`}>Read the Paper (make me a button)</a>
-          <hr
-            style={{
-              marginBottom: rhythm(1),
-            }}
-          />
+            />
+          </div>
         </article>
 
-        <nav>
+        <nav className={'content'}>
           <ul
             style={{
               display: `flex`,
@@ -148,6 +192,9 @@ export const pageQuery = graphql`
       paper_title
       paper_video
       paper
+      fields {
+        slug
+      }
     }
   }
 `

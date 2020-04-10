@@ -3,6 +3,12 @@ import Wordpress2016 from "typography-theme-wordpress-2016"
 
 Wordpress2016.overrideThemeStyles = () => {
   return {
+    ".content": {
+      marginLeft: `auto`,
+      marginRight: `auto`,
+      maxWidth: typography.rhythm(30),
+      padding: `${typography.rhythm(1.5)} ${typography.rhythm(3 / 4)}`,
+    },
     "a": {
       color: 'inherit'
     },
