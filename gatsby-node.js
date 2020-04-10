@@ -8,18 +8,13 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(
     `
       {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___name], order: ASC }
-          limit: 1000
-        ) {
+        allArtistsYaml(sort: { fields: name, order: DESC }) {
           edges {
             node {
               fields {
                 slug
               }
-              frontmatter {
-                name
-              }
+              name
             }
           }
         }
@@ -31,7 +26,7 @@ exports.createPages = async ({ graphql, actions }) => {
     throw result.errors
   }
 
-  const pages = result.data.allMarkdownRemark.edges
+  const pages = result.data.allArtistsYaml.edges
 
   pages.forEach((page, index) => {
     const previous = index === pages.length - 1 ? null : pages[index + 1].node
@@ -52,7 +47,7 @@ exports.createPages = async ({ graphql, actions }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `ArtistsYaml`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,

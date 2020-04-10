@@ -7,8 +7,9 @@ import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import ReactPlayer from "react-player"
 import styles from "./artist-page.module.css"
+import FullscreenContainer from "../components/fullscreen-container"
 
-class BlogPostTemplate extends Component {
+class ArtistPageTemplate extends Component {
 
   constructor(props) {
     super(props);
@@ -28,29 +29,29 @@ class BlogPostTemplate extends Component {
 
   render() {
 
-    const post = this.props.data.markdownRemark
+    const artistPage = this.props.data.artistsYaml
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title={post.frontmatter.name}
-          description={post.frontmatter.description || post.excerpt}
+          title={artistPage.name}
+          description={artistPage.bio}
         />
         <article>
-          <header>
+          <FullscreenContainer>
             <div className={styles.playerWrapper}>
               <ReactPlayer
                 className={styles.reactPlayer}
-                url={post.frontmatter.video}
+                url={artistPage.bio_video}
                 width={"100%"}
                 height={"100%"}
                 onPlay={this.handlePlay}
                 onPause={this.handlePause}
                 light
                 playsinline
-                controls
+                controls={false}
               />
             </div>
             <h1
@@ -59,7 +60,7 @@ class BlogPostTemplate extends Component {
                 marginBottom: 0,
               }}
             >
-              {post.frontmatter.name}
+              {artistPage.name}
             </h1>
             <p
               style={{
@@ -70,16 +71,20 @@ class BlogPostTemplate extends Component {
             >
               {/*{post.frontmatter.date}*/}
             </p>
-          </header>
-          <section className={styles.content} dangerouslySetInnerHTML={{ __html: post.html }}/>
+          </FullscreenContainer>
+          <p>{artistPage.bio}</p>
+          <h2>{artistPage.paper_title}</h2>
+          <ReactPlayer
+            // className={styles.reactPlayer}
+            url={artistPage.paper_video}
+            controls
+          />
+          <a href={`/files/${artistPage.paper}`}>Read the Paper (make me a button)</a>
           <hr
             style={{
               marginBottom: rhythm(1),
             }}
           />
-          <footer>
-            {/*<Bio />*/}
-          </footer>
         </article>
 
         <nav>
@@ -95,14 +100,14 @@ class BlogPostTemplate extends Component {
             <li>
               {previous && (
                 <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.name}
+                  ← {previous.name}
                 </Link>
               )}
             </li>
             <li>
               {next && (
                 <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.name} →
+                  {next.name} →
                 </Link>
               )}
             </li>
@@ -113,24 +118,36 @@ class BlogPostTemplate extends Component {
   }
 }
 
-export default BlogPostTemplate
+export default ArtistPageTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query ArtistBySlug($slug: String!) {
     site {
       siteMetadata {
         title
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
-      html
-      frontmatter {
-        name
-        description
-        video
+    artistsYaml(fields: {slug: {eq: $slug}}) {
+      acoustic_pieces {
+        title
+        date
+        medium
+        link
+        score
+        program_notes
       }
+      fixed_media_pieces {
+        title
+        date
+        link
+        program_notes
+      }
+      bio
+      bio_video
+      name
+      paper_title
+      paper_video
+      paper
     }
   }
 `

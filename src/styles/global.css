@@ -1,5 +1,12 @@
 /*For anything custom that isn't appropriate for the overrideThemeStyles call*/
 
+/** {*/
+/*  !*width: 100%;*!*/
+/*  !*height: 100%;*!*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*}*/
+
 body {
   background-color: #010101;
   color: #F0ECE2;

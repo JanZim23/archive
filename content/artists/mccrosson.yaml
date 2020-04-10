@@ -1,0 +1,82 @@
+name: Kyle McCrosson
+bio_video: https://www.youtube.com/watch?v=rL_Qfpp2Dh8
+bio: >-
+  Kyle McCrosson is a musician, performer, songwriter, sound designer, and producer from Bayport, New York. Computer
+  Science, Music Composition & Technology major. His interest in music began with piano lessons from the age of 6. From
+  there, he learned the trumpet and the French horn in school, and taught himself to play the guitar and electric bass.
+  In middle school, he began writing his own melodies on the piano-- something that has blossomed into a long love of
+  songwriting. Throughout his five years at Northeastern studying computer science and music composition and technology,
+  he has had the opportunity to compose for small ensembles, do sound design for student animations and plays, and expand
+  his knowledge of sound synthesis techniques. His most current, ongoing project has been writing, producing, and
+  recording electronic pop music under the stage-name 'Kale'.
+paper_title: "Cool Title"
+paper_video: https://www.youtube.com/watch?v=eMWeQWGla0Y
+paper: kyle/Deviation.pdf
+acoustic_pieces:
+  - title: Deviation
+    date: Spring 2017
+    medium: Clarinet, Cello, and Piano
+    link: https://soundcloud.com/kale-sounds/deviation/s-xKxbJdv1w4E
+    score: /kyle/Deviation.pdf
+    program_notes: >-
+      ‘Deviation’ is a piece for clarinet, cello, and piano that Kyle composed as a part of his composition lessons at
+      Northeastern. It begins with a calm and serene melody, passing between the three instruments, but takes a dramatic
+      and suspenseful turn when it dips into the relative minor. The piece comes around to a conclusive final section
+      when the melody from the beginning re-emerges, in a slower and grander expression of the initial idea. This was
+      one of the first classical pieces that Kyle composed for a small ensemble. Most of his prior pieces consisted of
+      piano solos.
+fixed_media_pieces:
+  - title: digital_forest
+    date: Fall 2019
+    link: https://soundcloud.com/kale-sounds/digital-forest/s-67IWn06lWe1
+    program_notes: >-
+      'digital_forest' is an exploration of the use of synthesized birdcall as a compositional tool. The piece begins in
+      a natural-feeling forest soundscape, with the gradual introduction of a variety of bird calls in a type of call
+      and response. Gradually, the composition transitions into a rhythmically-based section where the sounds that were
+      previously making up the soundscape are now used almost as percussion instruments. 'digital_forest' builds to a
+      climax when the bird call sounds devolve into their base waveforms, revealing the primitive synthesis that was
+      used to create them as the rhythm falls apart into chaos. While simultaneously being a study of physical modeling
+      synthesis and soundscape composition, 'digital_forest' also serves to show listeners that all that appears real
+      in the digital age may in fact be manufactured beneath the surface.
+  - title: Think About Leaving
+    date: ???
+    link: https://soundcloud.com/kale-sounds/think-about-leaving
+    program_notes: >-
+      Inspired by a variety of electronic music, Kyle wanted to explore his love of pop music and created his ‘Kale’
+      project. Through this experience, Kyle has been able to develop his songwriting, production, and performance
+      skills. This journey has also led him to be able to collaborate with a variety of students and artists in the
+      Boston area--an invaluable opportunity that has taught him so much about what it means to be part of an artistic
+      community. Kyle plans to continue releasing music as Kale after graduation, and is excited to see where this
+      project will take him.
+
+      Think About Leaving was one of the first pop songs Kyle ever wrote, long before the inception of the Kale era.
+      He wrote it in high school, but never recorded it at the time because he lacked the know-how. Upon beginning his
+      more serious attempts at production and songwriting, Kyle decided to brush this one up and give it the effort
+      that it deserved. Think About Leaving was co-produced, mixed, and mastered by Emilee Lyons, a local artist.
+  - title: Smart Car
+    date: ???
+    link: https://soundcloud.com/kale-sounds/smart-car
+    program_notes: >-
+      Kyle wrote Smart Car while on co-op at The Bridge Sound and Stage in Somerville. He was inspired when he passed
+      a Smart Car on the street, and thought it would be a fun topic to write about because songs rarely glamorize
+      this small, goofy-looking, eco-friendly vehicle. The production for this song was done by Murray Sandmeyer and
+      was mixed and mastered at The Bridge by Kyle’s coworkers Emilee Lyons and Alex Allinson.
+  - title: Mary Lou
+    date: ???
+    link: https://soundcloud.com/kale-sounds/mary-lou/s-2PSWVnr17y1
+    program_notes: >-
+      In his senior year at Northeastern, Kyle had the opportunity to take two songwriting classes with Professor
+      Melissa Ferrick, during which he was not only able to develop a more methodical songwriting technique, but he
+      also wrote and produced more than 15 original songs. One of these songs was Mary Lou--a stripped back (although
+      still electronic in aesthetic) ballad to a close friend of his. Thing track is currently being polished up,
+      mixed, and prepared for official release under Kale.
+  - title: Invasion
+    date: Spring 2019
+    link: https://vimeo.com/333603991
+    program_notes: >-
+      ‘Invasion’ is a short animated film created by Victoria Barranco, a senior at Northeastern at the time, who asked
+      Kyle to design the sound effects for the animation. Barranco created this film as part of her capstone project--it
+      depicts an alligator named Scoot and his butterfly friend who are put in danger by a gang of monsters encroaching
+      on their home. The film is meant to raise awareness for the destruction of wetlands and marshes to build suburban
+      housing in Florida. All sound in the video, aside from the music, was recorded and designed by Kyle. The film was
+      accepted into 13 film festivals in 6 countries around the world including the United States, Italy, and Brazil.
