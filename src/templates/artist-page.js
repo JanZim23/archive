@@ -82,7 +82,7 @@ class ArtistPageTemplate extends Component {
               controls
             />
             <a href={`/files${artistPage.fields.slug}${artistPage.paper}`}>Read the Paper (make me a button)</a>
-            {artistPage.fixed_media_pieces.length > 0 &&
+            {artistPage.acoustic_pieces.length > 0 &&
               <div>
                 <h2>Acoustic Works</h2>
                 <Slider {...sliderSettings}>

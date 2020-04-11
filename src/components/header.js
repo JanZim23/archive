@@ -8,7 +8,6 @@ class Header extends Component {
   constructor(props) {
     super(props);
     const rootPath = `${__PATH_PREFIX__}/`
-    console.log(rootPath, props.location)
     this.state = {isExpanded: props.location.pathname === rootPath};
     this.handleExpand = this.handleExpand.bind(this);
   }
