@@ -97,7 +97,9 @@ class ArtistPageTemplate extends Component {
                         playsinline
                         controls
                       />
-                      <a href={`/files${artistPage.fields.slug}${piece.score}`}>Score (make me a button too)</a>
+                      {piece.score &&
+                        <a href={`/files${artistPage.fields.slug}${piece.score}`}>Score (make me a button too)</a>
+                      }
                     </div>
                   ))}
                 </Slider>
