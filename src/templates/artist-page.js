@@ -81,7 +81,7 @@ class ArtistPageTemplate extends Component {
               width={"100%"}
               controls
             />
-            <a href={`/files${artistPage.fields.slug}${artistPage.paper}`}>Read the Paper (make me a button)</a>
+            <a href={`/files${artistPage.fields.slug}${artistPage.paper}`} className={'button'}>Read the Paper</a>
             {artistPage.acoustic_pieces.length > 0 &&
               <div>
                 <h2>Acoustic Works</h2>
@@ -89,7 +89,8 @@ class ArtistPageTemplate extends Component {
                   {artistPage.acoustic_pieces.map((piece, index) => (
                     <div key={index}>
                       <h3>{piece.title}</h3>
-                      <p>{piece.date}, {piece.medium}</p>
+                      <p>{piece.date}</p>
+                      <p>{piece.medium}</p>
                       <p>{piece.program_notes}</p>
                       <ReactPlayer
                         url={piece.link}
@@ -98,7 +99,7 @@ class ArtistPageTemplate extends Component {
                         controls
                       />
                       {piece.score &&
-                        <a href={`/files${artistPage.fields.slug}${piece.score}`}>Score (make me a button too)</a>
+                        <a href={`/files${artistPage.fields.slug}${piece.score}`} className={'button'}>Score</a>
                       }
                     </div>
                   ))}

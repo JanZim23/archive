@@ -26,3 +26,30 @@ body {
   color: white !important;
   font-size: 20px !important;
 }
+
+a.button {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border: 0.1em solid #F0ECE2;
+  margin: 0.5em;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  /*text-decoration: none;*/
+  /*font-family: 'Roboto',sans-serif;*/
+  /*font-weight: 300;*/
+  color: #F0ECE2;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+a.button:hover {
+  color: #000000;
+  background-color: #F0ECE2;
+}
+
+@media all and (max-width:30em) {
+   a.button {
+    display: block;
+    margin: 0.4em auto;
+  }
+}

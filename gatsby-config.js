@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Archive`,
+    title: `ARCHIVE`,
     author: `Northeastern Music Technology Seniors 2020`,
     description: `The archive of knowledge and compositions.`,
     siteUrl: `https://music-tech.net/`,

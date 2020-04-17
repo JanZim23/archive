@@ -1,13 +1,22 @@
 import Typography from "typography"
 import Wordpress2016 from "typography-theme-wordpress-2016"
 
-Wordpress2016.overrideThemeStyles = () => {
+Wordpress2016.overrideThemeStyles = ({rhythm}, options) => {
+  console.log(options)
+  options.headerFontFamily = ["Montserrat", "sans-serif"]
+  options.bodyFontFamily = ["Open Sans", "sans-serif"]
+
   return {
     ".content": {
       marginLeft: `auto`,
       marginRight: `auto`,
-      maxWidth: typography.rhythm(30),
-      padding: `${typography.rhythm(1.5)} ${typography.rhythm(3 / 4)}`,
+      maxWidth: rhythm(30),
+      padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+    },
+    ".person": {
+      borderRadius: '50%',
+      display: 'block',
+      margin: 'auto'
     },
     "a": {
       color: 'inherit'
@@ -15,6 +24,12 @@ Wordpress2016.overrideThemeStyles = () => {
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
+    "h1": {
+      fontSize: rhythm(2)
+    },
+    "h2": {
+      fontSize: rhythm(1.5)
+    }
   }
 }
 

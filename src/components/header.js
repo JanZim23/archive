@@ -27,6 +27,7 @@ class Header extends Component {
         {artists.map(({ node }, index) => (
           <Link to={node.fields.slug} className={styles.navlink} key={index}>{node.name}</Link>
         ))}
+        <Link to={'/performers'} className={styles.navlink} key={"performers"}>Performers</Link>
       </nav>
     )
 
