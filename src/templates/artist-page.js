@@ -74,14 +74,17 @@ class ArtistPageTemplate extends Component {
           </FullscreenContainer>
           <div className={'content'}>
 
-            <p style={{whiteSpace: 'pre-wrap'}}>{artistPage.bio}</p>
+            <p>{artistPage.bio}</p>
             <h2>{artistPage.paper_title}</h2>
             <ReactPlayer
               url={artistPage.paper_video}
               width={"100%"}
               controls
             />
-            <a href={`/files${artistPage.fields.slug}${artistPage.paper}`} className={'button'}>Read the Paper</a>
+            <a href={`/files${artistPage.fields.slug}${artistPage.paper}`}
+               className={'button'}
+               target="_blank"
+               rel="noopener noreferrer">Read the Paper</a>
             {artistPage.acoustic_pieces.length > 0 &&
               <div>
                 <h2>Acoustic Works</h2>
@@ -97,9 +100,13 @@ class ArtistPageTemplate extends Component {
                         width={"100%"}
                         playsinline
                         controls
+                        config={{soundcloud: {options: {visual: false}}}}
                       />
                       {piece.score &&
-                        <a href={`/files${artistPage.fields.slug}${piece.score}`} className={'button'}>Score</a>
+                        <a href={`/files${artistPage.fields.slug}${piece.score}`}
+                           className={'button'}
+                           target="_blank"
+                           rel="noopener noreferrer">Score</a>
                       }
                     </div>
                   ))}
@@ -111,7 +118,7 @@ class ArtistPageTemplate extends Component {
                 <h2>Fixed Media Works</h2>
                 <Slider {...sliderSettings}>
                 {artistPage.fixed_media_pieces.map((piece, index) => (
-                  <div key={index}>
+                  <div key={index} style={{paddingLeft: '10px', paddingRight: '10px'}}>
                     <h3>{piece.title}</h3>
                     <p>{piece.date}</p>
                     <p>{piece.program_notes}</p>
@@ -120,6 +127,7 @@ class ArtistPageTemplate extends Component {
                       width={"100%"}
                       playsinline
                       controls
+                      config={{soundcloud: {options: {visual: false}}}}
                     />
                   </div>
                 ))}

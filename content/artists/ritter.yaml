@@ -1,9 +1,69 @@
 name: Christopher Ritter
 bio_video: https://www.youtube.com/watch?v=dQw4w9WgXcQ
 bio: >-
-  None.
-paper_title: "Cool Title"
+  The first website Chris Ritter ever made was a Club Penguin screenshot blog in 2009. By that time, he had been playing
+  piano for 5 years. In the years since then, the interests in technology and music have converged into an undergraduate
+  career at Northeastern University studying Computer Science and Music Technology as a combined degree. Today, he works
+  as a software engineer for the music game studio Harmonix and is wrapping up the final year of his degree. While Chris
+  writes and composes music, he is currently further exploring the use of technology in the process of composition and
+  performance. Take a listen to "Decade"; The first sounds you hear represent posts on that very first Club Penguin blog.
+paper_title: Title TBD
 paper_video: ""
 paper:
 acoustic_pieces: []
-fixed_media_pieces: []
+fixed_media_pieces:
+  - title: Name TBD
+    date: Spring 2020
+    link: ""
+    program_notes: >-
+      TODO
+  - title: Always On
+    date: Spring 2020
+    link: https://soundcloud.com/1_0/always-on?secret_token=s-NKgmloscrQA
+    program_notes: >-
+      TODO
+  - title: Decade
+    date: Fall 2019
+    link: https://soundcloud.com/1_0/decade?secret_token=s-Z8Nx9sYV14A
+    program_notes: >-
+      April 26, 2009 was the date where I made my first email address. The creation of this account enabled my first real
+      digital engagement. Today, these online accounts tend to be a part of identity -- how we display ourselves to the
+      world, converse, and deeply explore the things that move us.
+
+
+      Developed in Fall 2019, "Decade" precedes "Always On." It is a sonification of 10 years of my online data,
+      from 4/26/2009 to 4/26/2019. The sonification definition here is looser than "Always On," as some of the
+      data-to-sound choices were more self-driven than data-driven. It is difficult to parse out much
+      meaningful information about me from this piece. Particular synths and sounds rise to prominence and fall to
+      silence as I use the platforms they represent more or less. Summers in which I attended sleepaway camp for months
+      without technology are marked by about 3 seconds of respite each during the first half. Starting at 3:26 you can
+      hear questions I asked Google with voice commands throughout the latter years. And yes, they store all of those
+      MP3s...
+
+
+      The gigabytes of data were sourced from all of my most active accounts from 2009 to 2019 (though some information
+      had been lost to time), using JavaScript and Max for Live. The program video above features a brief look at the
+      workflow used to make the piece.
+  - title: Real|Digital Love
+    date: Fall 2019
+    link: https://soundcloud.com/1_0/realdigital-love?secret_token=s-YUr4zG9FYwB
+    program_notes: >-
+      Interpersonal connectedness has changed. People will have conducted entire romantic relationships without ever
+      meeting the subject of their infatuation in person. Even with the people we see in person, there is an implicit
+      expectation that the ones close to use will be in touch online. Are emotional bonds formed over video chats, phone
+      calls, and messages less valid?
+
+
+      Composed entirely using samples from "Real Love" by John Lennon and "Digital Love" by Daft Punk, it builds texture
+      and magnitude until it envelopes the listener in a Rossini Crescendo of sorts. The piece was composed as an
+      exercise in Plunderphonics for Composition for Electronic Instruments, Fall 2019.
+  - title: Wndrlnd
+    date: Fall 2019
+    link: https://soundcloud.com/1_0/wndrlnd?secret_token=s-C6jtFkFYKVa
+    program_notes: >-
+      "Wndrlnd" was composed using public domain audiobook recordings of various editions of "Alice's Adventures in
+      Wonderland" by Lewis Carroll. The piece explores the use of voice as a textural, rhythmic, and compositional tool
+      by accentuating vocal dynamic ranges, plosives, vowel sounds, and patterns found in regular speech. As all sounds
+      in the piece are sourced from these audiobooks, artifacts from the readers' accents, recording fidelity, and
+      dramatic reenactment all can be heard as the readers approach the same passages with different attitudes. Down the
+      rabbit hole...

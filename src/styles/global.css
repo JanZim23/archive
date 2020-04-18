@@ -27,6 +27,22 @@ body {
   font-size: 20px !important;
 }
 
+.slick-slide {
+  padding: 0 15px;
+}
+
+.slick-prev {
+  left: -70px !important;
+}
+
+.slick-next {
+  right: -50px !important;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 40px !important;
+}
+
 a.button {
   display: inline-block;
   padding: 0.5em 1.5em;

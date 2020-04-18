@@ -14,7 +14,7 @@ const HomePage = ({ data, location }) => {
       <FullscreenContainer>
         {/*<h2>Music Technology</h2>*/}
         <div>
-          <h1>Archive</h1>
+          <h1>ARCHIVE</h1>
           <div style={{ fontStyle: "italic" }}>Music in a time of isolation.</div>
         </div>
       </FullscreenContainer>

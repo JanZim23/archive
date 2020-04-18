@@ -29,6 +29,9 @@ Wordpress2016.overrideThemeStyles = ({rhythm}, options) => {
     },
     "h2": {
       fontSize: rhythm(1.5)
+    },
+    "p": {
+      whiteSpace: 'pre-wrap'
     }
   }
 }

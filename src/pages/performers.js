@@ -29,7 +29,7 @@ const PerformerPage = ({ data, location }) => {
               <a href={performer.website}>
                 <h2>{performer.name}</h2>
               </a>
-              <p style={{whiteSpace: 'pre-wrap'}}>{performer.bio}</p>
+              <p>{performer.bio}</p>
               <hr />
             </div>
           )
