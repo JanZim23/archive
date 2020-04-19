@@ -42,8 +42,8 @@ fixed_media_pieces:
 
 
       The gigabytes of data were sourced from all of my most active accounts from 2009 to 2019 (though some information
-      had been lost to time), using JavaScript and Max for Live. The program video above features a brief look at the
-      workflow used to make the piece.
+      had been lost to time), and parsed into MIDI events using JavaScript and Max for Live. The program video above 
+      features a brief look at the workflow used to make the piece.
   - title: Real|Digital Love
     date: Fall 2019
     link: https://soundcloud.com/1_0/realdigital-love?secret_token=s-YUr4zG9FYwB
