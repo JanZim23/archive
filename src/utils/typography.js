@@ -2,7 +2,6 @@ import Typography from "typography"
 import Wordpress2016 from "typography-theme-wordpress-2016"
 
 Wordpress2016.overrideThemeStyles = ({rhythm}, options) => {
-  console.log(options)
   options.headerFontFamily = ["Montserrat", "sans-serif"]
   options.bodyFontFamily = ["Open Sans", "sans-serif"]
 

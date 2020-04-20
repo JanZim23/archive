@@ -4,10 +4,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 import ReactPlayer from "react-player"
 import styles from "./artist-page.module.css"
 import FullscreenContainer from "../components/fullscreen-container"
@@ -75,16 +74,20 @@ class ArtistPageTemplate extends Component {
           <div className={'content'}>
 
             <p>{artistPage.bio}</p>
-            <h2>{artistPage.paper_title}</h2>
-            <ReactPlayer
-              url={artistPage.paper_video}
-              width={"100%"}
-              controls
-            />
-            <a href={`/files${artistPage.fields.slug}${artistPage.paper}`}
-               className={'button'}
-               target="_blank"
-               rel="noopener noreferrer">Read the Paper</a>
+            {artistPage.paper_title &&
+              <div>
+                <h2>{artistPage.paper_title}</h2>
+                <ReactPlayer
+                url={artistPage.paper_video}
+                width={"100%"}
+                controls
+                />
+                <a href={`/files${artistPage.fields.slug}${artistPage.paper}`}
+                   className={'button'}
+                   target="_blank"
+                   rel="noopener noreferrer">Read the Paper</a>
+              </div>
+            }
             {artistPage.acoustic_pieces.length > 0 &&
               <div>
                 <h2>Acoustic Works</h2>
@@ -100,7 +103,7 @@ class ArtistPageTemplate extends Component {
                         width={"100%"}
                         playsinline
                         controls
-                        config={{soundcloud: {options: {visual: false}}}}
+                        config={{soundcloud: {options: {visual: true}}}}
                       />
                       {piece.score &&
                         <a href={`/files${artistPage.fields.slug}${piece.score}`}
@@ -127,7 +130,7 @@ class ArtistPageTemplate extends Component {
                       width={"100%"}
                       playsinline
                       controls
-                      config={{soundcloud: {options: {visual: false}}}}
+                      config={{soundcloud: {options: {visual: true}}}}
                     />
                   </div>
                 ))}

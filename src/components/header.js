@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { rhythm, scale } from "../utils/typography"
 import styles from './header.module.css'
 import { graphql, Link, StaticQuery } from "gatsby"
 import { CSSTransition } from "react-transition-group"
