@@ -8,15 +8,15 @@ bio: >-
   integrate technology into performance in more naturally responsive methods. Joseph has also performed with the
   Northeastern Choral Society, and the Blues and Fusion ensembles. He is also a part of the Boston-based neo-soul/jazz/funk
   group False Pocket.
-paper_title: "Cool Title"
-paper_video: ""
+paper_title:
+paper_video:
 paper:
 acoustic_pieces:
   - title: Warm Up
-    date: ???
-    medium: Saxophone and Max patch
-    link: ""
-    score: ""
+    date: Fall 2019
+    medium: Saxophone (Joseph Newmann) and Max patch
+    link: https://soundcloud.com/joseph-newmann/warm-up
+    score:
     program_notes: >-
       “Warm up” is a piece that sets the performer in different “scenes”, which they navigate with improvisation. The
       piece looks to provide a new context for performers to improvise in, and each scene is created with a collection
@@ -24,9 +24,9 @@ acoustic_pieces:
       the MAX patch moving through the scenes based on different rhythmic cues, although there is no predetermined order
       in which the scenes unfold.
   - title: Finding Form
-    date: ???
-    medium: String Quartet
-    link: ""
+    date: "2018"
+    medium: Violin 1 (Gabriela Diaz), Violin 2 (Lilit Hartunian), Viola (Ashe Gordon), Cello (Rafael Popper-Keizer)
+    link: https://www.youtube.com/watch?v=OVF8DYiFLD0
     score: FindingForm.pdf
     program_notes: >-
       Written during composition lessons with Professor Daniel Strong Godfrey, “Finding Form” is the first String
@@ -38,7 +38,7 @@ acoustic_pieces:
 fixed_media_pieces:
   - title: Presidential Voices
     date: Fall 2019
-    link: https://soundcloud.com/joseph-newmann/presidential-voices?secret_token=s-ST4SZjcDFO5
+    link: https://soundcloud.com/joseph-newmann/presidential-voices
     program_notes: >-
       Joseph composed “Presidential Voices” in Composition for Electronic Instruments, where students were tasked with
       creating a piece using the voice as the source material. All of the samples that were used were recordings of

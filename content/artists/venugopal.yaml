@@ -1,5 +1,5 @@
 name: Arun Venugopal
-bio_video: ""
+bio_video: https://www.youtube.com/watch?v=iosLmDFvhPI
 bio: >-
   Arun Venugopal (UH-roon VAY-noo-go-pahl), also known as V. Arun, is a Massachusetts native studying a combined major
   of Physics + Music Composition & Technology, with a minor in Music Recording. His musical origins began with the violin,
@@ -12,14 +12,14 @@ bio: >-
   background knowledge in composition, production, and orchestration is part of his current creative focus; he is also
   learning guitar, cajon, tabla, and piano. On the side, he is a passionate advocate for South Asian-American
   representation in the arts and is developing a network to connect and support musicians around the country.
-paper_title: "Cool Title"
-paper_video: ""
-paper:
+paper_title: "The Shape of A-E-I-O-U: A Case Study of Vowel Height, Vocal Synthesis, and Placement in Collegiate A Cappella Singers."
+paper_video:
+paper: The Shape of AEIOU.pdf
 acoustic_pieces:
   - title: Sonata for Strings, No. 1
     date: Fall 2018
-    medium: Violin 1, Violin 2, Viola, Cello
-    link: /files/venugopal/Sonata.mp3
+    medium: Violin 1 (Gabriela Diaz), Violin 2 (Lilit Hartunian), Viola (Ashe Gordon), Cello (Rafael Popper-Keizer)
+    link: https://www.youtube.com/watch?v=ljID7XxHWU0
     score: Sonata for String Quartet.pdf
     program_notes: >-
       Written in Professor Anthony De Ritis’s Introduction to Composition course, this string quartet is written in the

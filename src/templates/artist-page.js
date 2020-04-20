@@ -72,16 +72,17 @@ class ArtistPageTemplate extends Component {
             }
           </FullscreenContainer>
           <div className={'content'}>
-
-            <p>{artistPage.bio}</p>
+            <p dangerouslySetInnerHTML={{__html: artistPage.bio}} />
             {artistPage.paper_title &&
               <div>
                 <h2>{artistPage.paper_title}</h2>
+                {artistPage.paper_video &&
                 <ReactPlayer
                 url={artistPage.paper_video}
                 width={"100%"}
                 controls
                 />
+                }
                 <a href={`/files${artistPage.fields.slug}${artistPage.paper}`}
                    className={'button'}
                    target="_blank"
@@ -97,7 +98,7 @@ class ArtistPageTemplate extends Component {
                       <h3>{piece.title}</h3>
                       <p>{piece.date}</p>
                       <p>{piece.medium}</p>
-                      <p>{piece.program_notes}</p>
+                      <p dangerouslySetInnerHTML={{__html: piece.program_notes}} />
                       <ReactPlayer
                         url={piece.link}
                         width={"100%"}
@@ -124,7 +125,7 @@ class ArtistPageTemplate extends Component {
                   <div key={index} style={{paddingLeft: '10px', paddingRight: '10px'}}>
                     <h3>{piece.title}</h3>
                     <p>{piece.date}</p>
-                    <p>{piece.program_notes}</p>
+                    <p dangerouslySetInnerHTML={{__html: piece.program_notes}} />
                     <ReactPlayer
                       url={piece.link}
                       width={"100%"}
