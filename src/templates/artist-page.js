@@ -98,7 +98,6 @@ class ArtistPageTemplate extends Component {
                       <h3>{piece.title}</h3>
                       <p>{piece.date}</p>
                       <p>{piece.medium}</p>
-                      <p dangerouslySetInnerHTML={{__html: piece.program_notes}} />
                       <ReactPlayer
                         url={piece.link}
                         width={"100%"}
@@ -112,6 +111,8 @@ class ArtistPageTemplate extends Component {
                            target="_blank"
                            rel="noopener noreferrer">Score</a>
                       }
+                      <br/>
+                      <p dangerouslySetInnerHTML={{__html: piece.program_notes}} />
                     </div>
                   ))}
                 </Slider>
@@ -125,7 +126,6 @@ class ArtistPageTemplate extends Component {
                   <div key={index} style={{paddingLeft: '10px', paddingRight: '10px'}}>
                     <h3>{piece.title}</h3>
                     <p>{piece.date}</p>
-                    <p dangerouslySetInnerHTML={{__html: piece.program_notes}} />
                     <ReactPlayer
                       url={piece.link}
                       width={"100%"}
@@ -133,6 +133,8 @@ class ArtistPageTemplate extends Component {
                       controls
                       config={{soundcloud: {options: {visual: true}}}}
                     />
+                    <br/>
+                    <p dangerouslySetInnerHTML={{__html: piece.program_notes}} />
                   </div>
                 ))}
                 </Slider>

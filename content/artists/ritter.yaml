@@ -7,21 +7,51 @@ bio: >-
   as a software engineer for the music game studio Harmonix and is wrapping up the final year of his degree. While Chris
   writes and composes music, he is currently further exploring the use of technology in the process of composition and
   performance. Take a listen to "Decade"; The first gongs you hear represent posts on that very first Club Penguin blog.
-paper_title: Title TBD
-paper_video: ""
+paper_title: Marrying Data and Sound for Analytical and Creative Composition
+paper_video: https://www.youtube.com/watch?v=1393qfKkH5g
 paper:
 acoustic_pieces: []
 fixed_media_pieces:
-  - title: Name TBD
+  - title: Swipe
     date: Spring 2020
-    link: ""
+    link: https://www.youtube.com/watch?v=5EDWalZktkM
     program_notes: >-
-      TODO
+      Swipe is an interactive "choose your own adventure" piece designed to be streamed online in real-time. Audiences
+      take part in the piece by modulating effects and textures of the sound-collage using their smartphones during the
+      performance. Additionally, a prompt will instruct them to swipe left or right based on personal criteria at
+      crossroads in the piece, and the next scene heard in the music is selected by the directional majority. Depending
+      on the route the listeners take, the piece becomes either an industrial and overpowering drone or a shimmering
+      wall of harmony.
+
+
+      This piece was developed utilizing a Max for Live plugin I wrote called
+      <a href="https://github.com/ccritter/crowdmap">CrowdMap</a>, that allows for real-time aggregated smartphone data
+      control of an Ableton Live set. Barring any technical difficulties, the piece will attempt to be streamed each
+      night this week (4/21-4/24) at 7pm at the YouTube link above.
   - title: Always On
     date: Spring 2020
     link: https://soundcloud.com/1_0/always-on?secret_token=s-NKgmloscrQA
     program_notes: >-
-      TODO
+      How often do you send your friends a text? How big is your sphere of frequent contacts? Are you a positive or negative
+      person? With this data sonification, I attempt to answer a few of these questions for myself. "Always On" is more
+      akin to a data visualization than a composition, as every event, sound, and effect is driven by data of my messages
+      from 2018 to 2020.
+
+
+      There's a lot to keep track of, but if you listen closely you can discern some interesting information: Gongs sound
+      every year, a cymbal ride sounds every half year, and a high hat every month. The instrument sounds correspond to
+      particular platforms (Facebook, Instagram, SMS/MMS, GroupMe), and each note is a message sent on that platform. The
+      pitch corresponds to a person in my life: I am middle C, and the closer the note is to middle C the more messages
+      I have sent to and received from that person over the two years. The more quiet a note, the longer the time since
+      I last messaged that person. The sentiment of each message was analyzed, and a running average of the positivity
+      or negativity of each message was kept over time per platform so that periods of heightened positivity are marked
+      by a long reverb and periods of negativity are heavily distorted.
+
+
+      See if you can hear friendships start and end, old friends reaching out, periods of positivity or negativity,
+      or even if I tended to send more positive or negative messages on specific platforms. Facebook in early 2018 sounds
+      particularly dreadful, for example, while the majority of my MMS conversations are with my family which are
+      particularly reverberant.
   - title: Decade
     date: Fall 2019
     link: https://soundcloud.com/1_0/decade?secret_token=s-Z8Nx9sYV14A
@@ -32,7 +62,8 @@ fixed_media_pieces:
 
 
       Developed in Fall 2019, "Decade" precedes "Always On." It is a sonification of 10 years of my online data,
-      from 4/26/2009 to 4/26/2019. The sonification definition here is looser than "Always On," as some of the
+      from 4/26/2009 to 4/26/2019. While "Always On" focused on messages, this sonifies nearly every action I took online
+      during that timeframe. Also, the sonification definition here is looser than "Always On," as some of the
       data-to-sound choices were more self-driven than data-driven. It is difficult to parse out much
       meaningful information about me from this piece. Particular synths and sounds rise to prominence and fall to
       silence as I use the platforms they represent more or less. Summers in which I attended sleepaway camp for months
@@ -42,7 +73,7 @@ fixed_media_pieces:
 
 
       The gigabytes of data were sourced from all of my most active accounts from 2009 to 2019 (though some information
-      had been lost to time), and parsed into MIDI events using JavaScript and Max for Live. The program video above 
+      had been lost to time), and parsed into MIDI events using JavaScript and Max for Live. The program video above
       features a brief look at the workflow used to make the piece.
   - title: Real|Digital Love
     date: Fall 2019
