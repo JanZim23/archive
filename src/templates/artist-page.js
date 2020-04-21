@@ -10,6 +10,7 @@ import { rhythm } from "../utils/typography"
 import ReactPlayer from "react-player"
 import styles from "./artist-page.module.css"
 import FullscreenContainer from "../components/fullscreen-container"
+import { DiscussionEmbed } from "disqus-react"
 
 class ArtistPageTemplate extends Component {
 
@@ -140,40 +141,46 @@ class ArtistPageTemplate extends Component {
                 </Slider>
               </div>
             }
-            <hr
-              style={{
-                marginBottom: rhythm(1),
-              }}
-            />
           </div>
         </article>
 
-        <nav className={'content'}>
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
+        <div className={'content'}>
+          <nav>
+            <ul
+              style={{
+                display: `flex`,
+                flexWrap: `wrap`,
+                justifyContent: `space-between`,
+                listStyle: `none`,
+                padding: 0,
+              }}
+            >
+              <li>
+                {previous && (
+                  <Link to={previous.fields.slug} rel="prev">
+                    ← {previous.name}
+                  </Link>
+                )}
+              </li>
+              <li>
+                {next && (
+                  <Link to={next.fields.slug} rel="next">
+                    {next.name} →
+                  </Link>
+                )}
+              </li>
+            </ul>
+          </nav>
+
+          <DiscussionEmbed
+            shortname="music-tech"
+            config={{
+              url: "https://music-tech.disqus.com",
+              identifier: artistPage.name,
+              title: "Comments",
             }}
-          >
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.name}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.name} →
-                </Link>
-              )}
-            </li>
-          </ul>
-        </nav>
+          />
+        </div>
       </Layout>
     )
   }

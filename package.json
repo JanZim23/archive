@@ -8,6 +8,7 @@
     "url": "https://github.com/JanZim23/archive/issues"
   },
   "dependencies": {
+    "disqus-react": "^1.0.8",
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-feed": "^2.3.26",

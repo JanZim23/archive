@@ -11,7 +11,13 @@ const HomePage = ({ data, location }) => {
       <FullscreenContainer>
         <div>
           <h1>ARCHIVE</h1>
-          <div style={{ fontStyle: "italic" }}>Music in a time of isolation.</div>
+          <div className={'content'} style={{ fontStyle: "italic" }}>
+            Once a year all the graduating seniors of the Music Technology Major at Northeastern University come together
+            to host a concert to demonstrate or perform the musical work they have done throughout their life so far.
+            Under these extraordinary circumstances, with the majority of the world under lockdown, this year’s students
+            will come together on this digital archive to present to our faculty, peers, friends and family that what we
+            could not do in person. We wish everyone good health and hope you enjoy this online symposium.
+          </div>
         </div>
       </FullscreenContainer>
     </Layout>
