@@ -1,9 +1,43 @@
 name: Jan Zimmermann
 bio_video: ""
 bio: >-
-  Coming soon.
-paper_title:
+  I was born in Berlin Germany in January 1997, after some years at a German school I switched to an English-speaking
+  school and never looked back. Since a very early age it had been my dream to go to the United States for University
+  and become a programmer. After being introduced to coding through various experimentation with Minecraft I thought
+  myself Java when I was 15. In high school I picked Music as a concentration and made great friends in the class of 5
+  people. We decided to build a basement studio out of all the combined equipment we could find, my job was to build it.
+  For the first time I enjoyed making music after having dreaded going to Piano lessons for years. In retrospect, I am
+  very glad that my parents encouraged me to keep going with them. Just before finishing the International Baccalaureate
+  I happened to go on a campus tour of Northeastern University when visiting Boston as a Tourist. I decided to give it a
+  shot and applied for undergraduate. When I found the combined major or Computer Science and Music I couldn’t believe
+  my eyes and thought that it would be perfect for me.
+
+
+  The five years I spent at Northeastern were certainly my most transformative, but I also realized that I would want to
+  be coding for the rest of my life. I have great respect for all people that pursue music as a career, it is not for me.
+paper_title: How can we leverage networks and distributed systems to reimagine real time audio applications?
 paper_video:
-paper:
+paper: paper.pdf
 acoustic_pieces: []
-fixed_media_pieces: []
+fixed_media_pieces:
+  - title: Content
+    date: Fall 2019
+    link: https://soundcloud.com/janzim23/content
+    program_notes: >-
+      I created Content for my Fall 2019 Composition for Electronic Instruments course. I recorded two very odd interviews
+      with my friends Matt and Hayley and asked them questions on the spot that most people would not have an immediate
+      answer to. The message I tried to convey was the extent to which the editing and selection of short clips would
+      distort the meaning that they were trying to convey.
+  - title: JMS
+    date: Fall 2017
+    link: https://soundcloud.com/janzim23/jms
+    program_notes: >-
+      JMS is a collaboration between Rupert Knoop and I. The iterative process of recording some samples, remixing them
+      and then rerecording was a great amount of fun. We ended up with a piece that starts and moves forward without ever
+      going back. All that was needed was some Midi tracks, a guitar and a piano.
+  - title: Odd Orchestra
+    date: Fall 2015
+    link: https://soundcloud.com/janzim23/odd-orchestra
+    program_notes: >-
+      Odd Orchestra was a fun composition mostly based on MIDI instruments from the Kontakt Library. With exception to a
+      4 bar a cappella interlude and the guitar, all the sounds were made digitally.

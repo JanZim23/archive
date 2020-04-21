@@ -1,5 +1,5 @@
 name: Joseph Newmann
-bio_video: ""
+bio_video: https://www.youtube.com/watch?v=s8onCAqcbg0
 bio: >-
   Joseph Newmann is a musician, composer, performer and programmer, originally from Philadelphia, PA. Joseph began to
   find his compositional voice sometime in high school, where he performed in the jazz ensemble (alto saxophone), and
@@ -8,9 +8,9 @@ bio: >-
   integrate technology into performance in more naturally responsive methods. Joseph has also performed with the
   Northeastern Choral Society, and the Blues and Fusion ensembles. He is also a part of the Boston-based neo-soul/jazz/funk
   group False Pocket.
-paper_title:
-paper_video:
-paper:
+paper_title: Tempo and Beat Tracking for Interactive Real-Time Performance
+paper_video: https://www.youtube.com/watch?v=DpV7XWMYW7E
+paper: BeatTracking.pdf
 acoustic_pieces:
   - title: Warm Up
     date: Fall 2019
